@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Deylos Core/Deylos Core.iml" filepath="$PROJECT_DIR$/../../Deylos Core/Deylos Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Deylos Hub/Deylos Hub.iml" filepath="$PROJECT_DIR$/../../Deylos Hub/Deylos Hub.iml" />
       <module fileurl="file://$PROJECT_DIR$/Premier Plugin.iml" filepath="$PROJECT_DIR$/Premier Plugin.iml" />
     </modules>
   </component>

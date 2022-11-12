@@ -1,0 +1,15 @@
+name: DeylosCore
+version: 0.1
+author: Dirzii
+main: fr.dirzii.deyloscore.Main
+commands:
+  broadcast:
+    description: Ceci est un broadcast custom
+    permission: bc.use
+  infos:
+    description: Donne les infos des joueurs
+    permission: infos.use
+  spawn:
+    description: Ceci est une commande pour se téléporter au spawn du serveur
+  ping:
+    description: Permet de voir son ping
