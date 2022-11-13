@@ -16,10 +16,10 @@ public class CommandInfos implements CommandExecutor {
             if(args2.length == 1){
                 Player p2 = Bukkit.getPlayer(args2[0]);
                 if(p2 != null) {
-                    player.sendMessage("§aNom du joueur : " + p2.getName());
-                    player.sendMessage("§aUUID : " + p2.getUniqueId());
-                    player.sendMessage("§aAdresse Ip : " + p2.getAddress());
-                    player.sendMessage("§aPing : " + p2.getPing());
+                    player.sendMessage("§fNom du joueur : §a" + p2.getName());
+                    player.sendMessage("§fUUID : §a" + p2.getUniqueId());
+                    player.sendMessage("§fAdresse Ip : §a" + p2.getAddress());
+                    player.sendMessage("§fPing : §a" + p2.getPing());
                 } else{
                     player.sendMessage("§4Le joueur n'est pas connecté");
                 }

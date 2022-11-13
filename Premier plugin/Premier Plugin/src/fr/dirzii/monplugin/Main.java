@@ -7,7 +7,7 @@ public class Main  extends  JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("Le plugin vient de s'allumer");
-
+        getServer().getPluginManager().registerEvents(new PlayerConnection(), this);
 
     }
 

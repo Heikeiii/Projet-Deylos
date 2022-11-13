@@ -11,7 +11,7 @@ public class CommandPing implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] strings) {
         if(sender instanceof Player) {
             Player p = (Player) sender;
-            p.sendMessage("§bPing : " + p.getPing() + "ms");
+            p.sendMessage("§fPing : §b" + p.getPing() + "ms");
         }
         return false;
     }

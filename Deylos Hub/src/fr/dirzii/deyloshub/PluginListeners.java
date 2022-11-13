@@ -1,11 +1,10 @@
 package fr.dirzii.deyloshub;
 
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -92,7 +91,18 @@ public class PluginListeners implements Listener {
             e.setCancelled(true);
             player.closeInventory();
 
-            if(current.getType() == Material.DIAMOND_SWORD || current.getType() == Material.IRON_SWORD) {
+
+
+
+            if(current.getType() == Material.DIAMOND_SWORD) {
+                //player.sendMessage("§cEn cours de développement");
+                //Bukkit.dispatchCommand(player, "send Dirzii hcf");
+
+                sendToServer(player, "hcf");
+
+
+            }
+            if(current.getType() == Material.IRON_SWORD) {
                 player.sendMessage("§cEn cours de développement");
             }
         }
@@ -116,5 +126,11 @@ public class PluginListeners implements Listener {
         }
     }
 
+    public static void sendToServer(Player player, String serverName) {
+        ByteArrayDataOutput out = ByteStreams.newDataOutput();
+        out.writeUTF("Connect");
+        out.writeUTF(serverName);
 
+        player.sendPluginMessage(Main.INSTANCE, "BungeeCord", out.toByteArray());
+    }
 }
